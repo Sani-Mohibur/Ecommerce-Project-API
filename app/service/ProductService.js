@@ -348,6 +348,3 @@ export const ReviewListService = async (req) => {
     return { status: "Success", data: err.toString() };
   }
 };
-
-//CreateProductReview
-export const CreateReviewService = async () => {};

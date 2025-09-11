@@ -7,6 +7,7 @@ import * as ProductController from "../app/controllers/ProductController.js";
 import * as WishListController from "../app/controllers/WishListController.js";
 import * as CartListController from "../app/controllers/CartListController.js";
 import * as InvoiceController from "../app/controllers/InvoiceController.js";
+import * as ReviewController from "../app/controllers/ReviewController.js";
 import authMiddleware from "../app/middleware/authMiddleware.js";
 
 //Users
@@ -56,22 +57,25 @@ router.get(
   "/ProductReviewListById/:ProductID",
   ProductController.ProductReviewListById
 );
-router.post("/CreateProductReview", ProductController.CreateProductReview);
 
 //WishList
-router.post("/CreateWish", WishListController.CreateWish);
-router.get("/ReadWishList", WishListController.ReadWishList);
-router.delete("/RemoveWish", WishListController.RemoveWish);
+router.post("/CreateWish", authMiddleware, WishListController.CreateWish);
+router.get("/ReadWishList", authMiddleware, WishListController.ReadWishList);
+router.delete("/RemoveWish", authMiddleware, WishListController.RemoveWish);
 
 //CartList
-router.post("/CreateCart", CartListController.CreateCart);
-router.get("/ReadCart", CartListController.ReadCart);
-router.post("/UpdateCart", CartListController.UpdateCart);
-router.delete("/DeleteCart", CartListController.DeleteCart);
+router.post("/CreateCart", authMiddleware, CartListController.CreateCart);
+router.get("/ReadCart", authMiddleware, CartListController.ReadCart);
+router.post("/UpdateCart", authMiddleware, CartListController.UpdateCart);
+router.delete("/DeleteCart", authMiddleware, CartListController.DeleteCart);
 
 //Invoice
 router.post("/CreateInvoice", InvoiceController.CreateInvoice);
 router.get("/ReadInvoiceDetails", InvoiceController.ReadInvoiceDetails);
 router.get("/ReadInvoiceList", InvoiceController.ReadInvoiceList);
+
+//Review
+router.post("/CreateReview", authMiddleware, ReviewController.Review);
+router.post("/UpdateReview", authMiddleware, ReviewController.Review);
 
 export default router;

@@ -1,31 +1,26 @@
+import {
+  CreateCartService,
+  DeleteCartService,
+  ReadCartService,
+  UpdateCartService,
+} from "../service/CartListService.js";
+
 export const CreateCart = async (req, res) => {
-  try {
-    return res.json({ status: "Success", message: "" });
-  } catch (e) {
-    return res.json({ status: "Failed", message: e.toString });
-  }
+  let result = await CreateCartService(req);
+  return res.json(result);
 };
 
 export const ReadCart = async (req, res) => {
-  try {
-    return res.json({ status: "Success", message: "" });
-  } catch (e) {
-    return res.json({ status: "Failed", message: e.toString });
-  }
+  let result = await ReadCartService(req);
+  return res.json(result);
 };
 
 export const UpdateCart = async (req, res) => {
-  try {
-    return res.json({ status: "Success", message: "" });
-  } catch (e) {
-    return res.json({ status: "Failed", message: e.toString });
-  }
+  let result = await UpdateCartService(req);
+  return res.json(result);
 };
 
 export const DeleteCart = async (req, res) => {
-  try {
-    return res.json({ status: "Success", message: "" });
-  } catch (e) {
-    return res.json({ status: "Failed", message: e.toString });
-  }
+  let result = await DeleteCartService(req);
+  return res.json(result);
 };
