@@ -5,7 +5,7 @@ import {
   EMAIL_PORT,
   EMAIL_SECURITY,
   EMAIL_USER,
-} from "../config/config";
+} from "../config/config.js";
 
 const sendEmail = async (EmailTo, EmailSubject, EmailText) => {
   let transporter = nodemailer.createTransport({

@@ -7,7 +7,7 @@ export const JWT_EXPIRE_TIME = 30 * 24 * 60 * 60;
 export const EMAIL_HOST = "smtp.gmail.com";
 export const EMAIL_PORT = 587;
 export const EMAIL_SECURITY = false;
-export const EMAIL_USER = "mdfarabi200@gamil.com";
+export const EMAIL_USER = "mdfarabi200@gmail.com";
 export const EMAIL_PASS = "zgfj hcsg wwsr zewe";
 export const EMAIL_UN_AUTH = false;
 
