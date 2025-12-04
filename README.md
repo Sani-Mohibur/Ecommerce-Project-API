@@ -55,7 +55,7 @@ You will need to have the following software installed on your system:
 
 1.  **Clone the repository:**
     ```sh
-    git clone [https://github.com/Sani-Mohibur/Ecommerce-Project-API.git](https://github.com/Sani-Mohibur/Ecommerce-Project-API.git)
+    git clone https://github.com/Sani-Mohibur/Ecommerce-Project-API.git
     ```
 
 2.  **Navigate to the project directory:**
